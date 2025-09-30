@@ -302,3 +302,36 @@
 .shadow-box>span {
     text-shadow: 10px 5px 5px black;
 }
+
+
+.gradi {
+    height: 300px;
+    /* width: 400px; */
+    /* background-image: linear-gradient(to right, red, yellow, green); */
+    /* background-image: radial-gradient(circle, red, yellow); */
+    background-color: red;
+    width: 800px;
+}
+
+
+/*  */
+
+.unit-cal {
+    width: 700px;
+    background-color: yellow;
+    font-size: 15px;
+}
+
+.unit-desc2 {
+    width: 50%;
+    background-color: rgb(210, 110, 110);
+    font-size: 1rem;
+}
+
+.unit-desc1 {
+    font-size: 0.5em;
+}
+
+html {
+    font-size: 15px;
+}
