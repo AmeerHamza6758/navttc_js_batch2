@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" description="Ameer Hamza">
+    <title>Navttc--course</title>
+    <link rel="stylesheet" href="../CSS (CascadingStylesSheet)/styles.css" type="text/css">
+</head>
+
+<body>
+    <!-- Paragraph -->
+    <p>Hello Ameer Hamza</p>
+    <button class="button">I'm BUTTON</button>
+
+    <!-- Headings -->
+    <h1>Heading-1</h1>
+    <br>
+    <br>
+    <br>
+    <!-- Horizonal line -->
+    <hr>
+    <h2 dir="rtl">Heading-2</h2>
+    <h3 hidden>Heading-3</h3>
+    <h4>Heading-4</h4>
+    <h5>Heading-5</h5>
+    <h6>Heading-6</h6>
+    <H6>Wrong Way</H6>
+
+    <p>Lorem ipsum dolor sit amet consectetur <strong>adipisicing elit.</strong> Maiores <q>facilis repudiandae modi</q>
+        <i>dicta,libero reiciendis </i>iusto <u>alias vel numquam, pariatur dolores</u> <del> odio natus eaque
+            doloremque</del> est,
+        <code>illum dolor!</code>
+        <mark>Corrupti,</mark>
+        ducimus!
+    </p>
+
+
+    <!-- List -->
+    <h2>Students List</h2>
+    <ol type="i">
+        <li>Ameer</li>
+        <li>Saba</li>
+        <li>Arslan</li>
+        <li>Rahul</li>
+        <li>Rahul</li>
+        <li>Rahul</li>
+        <li>Rahul</li>
+    </ol>
+    <h2>Un-ordered list of students</h2>
+    <ul>
+        <li>Ameer</li>
+        <li>Saba</li>
+        <li>Arslan</li>
+        <li>Rahul</li>
+        <li>Rahul</li>
+        <li>Rahul</li>
+    </ul>
+
+    <!-- Data description -->
+    <dl>
+        <dt>Black Burger</dt>
+        <dd>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Suscipit nemo, voluptatem, velit nobis expedita ea
+            mollitia doloribus alias iste, aperiam animi tenetur id asperiores? Enim obcaecati explicabo neque
+            necessitatibus ratione.</dd>
+    </dl>
+
+    <!-- div-span -->
+    <div style="background-color: red;">
+        <h2>Ameer Hamza</h2>
+        <h3>Arslan Akmal</h3>
+        <h2>Iqbal javed</h2>
+    </div>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Error labore libero ex magni eum delectus a corrupti
+        iusto veritatis eaque illum cumque <span style="color: red;">consequuntur voluptatem nesciunt dicta </span>
+        ipsam, nemo reprehenderit non?</p>
+    <p>Ameer</p>
+    <br>
+
+
+    <!-- Media Elements -->
+    <!-- Image -->
+    <img src="../assets/images/download.jpeg" alt="Cat Logo" height="500px" width="200px">
+
+    <!-- Video -->
+    <video height="300px" width="500px" controls loop poster="../assets/images/download.jpeg">
+        <source src="../assets/video/myVideo.mp4" type="video/mp4">
+        <source src="../assets/video/myVide.mpeg" type="video/mpeg">
+    </video>
+    <br><br>
+    <!-- Audio -->
+    <audio controls muted>
+        <source src="../assets/audio/song.mp3" type="audio/mp3">
+    </audio>
+
+    <br><br>
+    <!-- Table -->
+    <table border="1" cellPadding="10" cellspacing="10">
+        <caption>Students Table</caption>
+        <thead>
+            <tr>
+                <th>SR_NO</th>
+                <th>NAME</th>
+                <th>EMAIL</th>
+                <th>ADDRESS</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>01</td>
+                <td colspan="2" rowspan="2">Ameer Hamza</td>
+                <td>ameer@email.com</td>
+                <td>RYK,PK</td>
+            </tr>
+            <tr>
+                <td>02</td>
+                <td>Ali Fahad</td>
+                <td>alif@email.com</td>
+                <td>RYK,PK</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td colspan="3">Total Record:</td>
+                <td>12</td>
+            </tr>
+        </tfoot>
+    </table>
+
+    <!-- Hyperlink -->
+    <br><br>
+    <a href="https://pk.khaadi.com/sale/fabrics/">Click me to visit Daraz</a>
+    <br><br>
+
+    <!-- Internal linking -->
+    <a href="./index.html">Click here to view Index page</a>
+
+    <br><br>
+    <!-- Forms -->
+    <h1>Student Registeration Form</h1>
+    <form action="">
+        <!-- Text -->
+        <label for="fname">Name:</label>
+        <input type="text" id="fname" placeholder="Please enter your Name" value="" required minlength="2"
+            maxlength="10"> <br>
+        <!-- Email -->
+        <label for="email">Email:</label>
+        <input type="email" id="email" required> <br>
+        <!-- Number -->
+        <label for="age">Age:</label>
+        <input type="number" id="age" min="5" max="20"> <br>
+        <!-- password -->
+        <label for="password">Password:</label>
+        <input type="password" id="password"> <br>
+        <!-- Range -->
+        <label for="range">Range</label>
+        <input type="range" id="range" min="5" max="20"> <br>
+        <!-- Color -->
+        <label for="color">Choose Color:</label>
+        <input type="color" id="color"> <br>
+        <!-- Hidden -->
+        <label for="hid">Hidden:</label>
+        <input type="hidden" id="hid"> <br>
+        <!-- Date -->
+        <label for="dob">Select DOB:</label>
+        <input type="date" name="" id="dob"> <br>
+        <!-- DateTime -->
+        <label for="datetime">Date Time:</label>
+        <input type="datetime-local" id="datetime"> <br>
+
+        <!-- Week-->
+        <label for="week">Week:</label>
+        <input type="week" id="week"> <br>
+
+        <!-- Month -->
+        <label for="month">Month:</label>
+        <input type="month" id="month"> <br>
+
+        <!-- Time -->
+        <label for="time">Time:</label>
+        <input type="time" id="time"> <br>
+
+        <!-- select -->
+        <select value="Pakistan">
+            <option value="KHI">Karachi</option>
+            <option value="lh">Lahore</option>
+            <option value="ryk">Rahimyar khan</option>
+            <option value="sdk">Sadiabad</option>
+        </select>
+
+
+        <!-- datalist -->
+        <label for="dd">Choose an item</label>
+        <input type="text" id="dd" list="datalist">
+        <datalist id="datalist">
+            <option value="RYK"></option>
+            <option value="KPK"></option>
+            <option value="SDK"></option>
+        </datalist>
+        <!-- textarea -->
+        <textarea placeholder="Feedback" rows="5" cols="50"></textarea>
+
+        <br>
+        <button type="submit">Submit</button>
+    </form>
+
+
+    <br><br>
+    <iframe src="https://www.programiz.com/javascript/online-compiler/" frameborder="2" width="700" height="500"
+        allowfullscreen></iframe>
+    <br>
+    <p contenteditable="true">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quia, ipsum corrupti id enim
+        illo ipsa, fuga nobis quis
+        voluptatibus quidem debitis rerum laboriosam dolores hic dolorem perferendis, eaque voluptate obcaecati?</p>
+
+
+    <!-- New -->
+    <Header>
+        <nav>
+            <ul>
+                <li>sale</li>
+                <li>#InstaKhadi</li>
+                <li>Home</li>
+                <li>ReadyToWear</li>
+            </ul>
+        </nav>
+    </Header>
+
+    <!-- Main -->
+    <main>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil explicabo commodi tenetur voluptates impedit
+            velit at, quia qui doloribus, aspernatur natus. Numquam, voluptatem cumque quis ad alias voluptate
+            consequatur quam.</p>
+
+        <!-- article -->
+        <article>
+            <h1>HTML</h1>
+            <p>HyperText markup language</p>
+        </article>
+
+        <!-- aside -->
+        <aside>
+
+        </aside>
+
+        <!-- Section -->
+        <section id="xyz">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto nobis labore at placeat fugit.
+                Natus, commodi fuga est temporibus quas eius sint voluptates, corporis voluptatem exercitationem nam
+                veritatis sapiente illum?</p>
+        </section>
+        <section>
+
+        </section>
+        <time datetime="10-20-2025">10-20-2025</time>
+        <details>
+            <summary>Hello Summary</summary>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium totam obcaecati quis laboriosam sunt
+                <abbr>HTML_FOR</abbr> aspernatur nisi ratione.
+            <address>street#13, </address> impedit,<code> perspiciatis architecto </code> alias
+            inventore ipsam quos ad.</p>
+        </details>
+
+        <meter value="0.4"></meter>
+        <progress value="20"></progress>
+    </main>
+
+    <button>I'm BUTTON</button>
+
+    <!-- Footer -->
+    <footer>
+        <ul>
+        </ul>
+    </footer>
+
+</body>
+
+</html>
+
+<!-- text, email, password, number, hidden, color, range, file, date, date-time local, week, month, time, textarea checkbox radio-->
