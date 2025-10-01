@@ -335,3 +335,91 @@
 html {
     font-size: 15px;
 }
+
+
+/* Grid in css */
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr)
+        /* grid-template-rows: 300px 300px 300px; */
+        /* column-gap: 50px;
+    row-gap: 20px; */
+}
+
+.grid-item-1 {
+    background-color: red;
+}
+
+.grid-item-2 {
+    background-color: orange;
+}
+
+.grid-item-3 {
+    background-color: green;
+}
+
+.grid-item-4 {
+    background-color: blue;
+}
+
+.grid-item-5 {
+    background-color: pink;
+}
+
+/* .grid-box{
+
+} */
+
+.psudo-text {
+    background-color: black;
+    color: white;
+    font-size: 30px;
+    transition: all 1s ease;
+}
+
+/* .psudo-text::first-letter{
+color: red;
+font-size: 80px;
+} */
+
+.psudo-text::before {
+    content: " ";
+    color: red;
+    font-size: 30px;
+}
+
+.psudo-text::after {
+    content: "";
+    height: 14px;
+    width: 50px;
+    background-color: orange;
+}
+
+.psudo-text::selection{
+    background-color: orange;
+    color: black;
+}
+
+/* classes */
+
+.psudo-text:hover{
+    color: orange;
+    /* font-size: 40px; */
+}
+
+.input-test{
+    outline: none;
+    border: 1px solid orange;
+}
+
+.input-test:focus{
+    background-color: lightcoral;
+    border-radius: 20px;
+}
+
+.input-test:active{
+    background-color: red;
+    border-radius: 20px;
+}
+
