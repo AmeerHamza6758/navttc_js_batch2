@@ -332,9 +332,9 @@
     font-size: 0.5em;
 }
 
-html {
+/* html {
     font-size: 15px;
-}
+} */
 
 
 /* Grid in css */
@@ -396,30 +396,70 @@ font-size: 80px;
     background-color: orange;
 }
 
-.psudo-text::selection{
+.psudo-text::selection {
     background-color: orange;
     color: black;
 }
 
 /* classes */
 
-.psudo-text:hover{
+.psudo-text:hover {
     color: orange;
     /* font-size: 40px; */
 }
 
-.input-test{
+.input-test {
     outline: none;
     border: 1px solid orange;
 }
 
-.input-test:focus{
+.input-test:focus {
     background-color: lightcoral;
     border-radius: 20px;
 }
 
-.input-test:active{
+.input-test:active {
     background-color: red;
     border-radius: 20px;
 }
 
+
+/* Animation */
+
+.animation-xyz {
+    font-size: 30px;
+    color: black;
+    /* background-color: bisque; */
+    width: 400px;
+    height: 300px;
+    /* animation: colorChanger; */
+    animation-name: colorChanger;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease;
+    /* animation-delay: 5s; */
+    animation-direction: alternate;
+    animation-play-state: running;
+}
+
+.animation-xyz:hover {
+    animation-play-state: paused;
+}
+
+@keyframes colorChanger {
+
+    from {
+        background-color: yellow;
+        color: black;
+    }
+
+    to {
+        background-color: black;
+        color: yellow;
+    }
+}
+
+@keyframes ball {
+    
+
+}
