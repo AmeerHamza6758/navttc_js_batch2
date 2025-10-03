@@ -36,22 +36,95 @@
     gap: 10px;
 }
 
-.footer-newsletter{
+
+.footer-newsletter {
     font-size: 14px;
     font-weight: 500;
     margin-bottom: 15px;
 }
 
-.footer-newsletter-input{
-    padding:10px 20px
+.footer-newsletter-input {
+    padding: 10px 20px
 }
 
-.footer-newsletter-input::placeholder{
+.footer-newsletter-input::placeholder {
     color: rgb(187, 187, 187);
     font-size: 15px;
 }
 
-.footer-bottom{
+.footer-bottom {
     font-size: 13px;
     text-align: center;
 }
+
+/* body{
+    overflow: hidden;
+    margin: 0px;
+    padding: 0px;
+} */
+
+.md-parent {
+    height: 500px;
+    width: auto;
+    background-color: rgb(206, 206, 206);
+}
+
+.md-title {
+    color: blue;
+}
+
+.md-title>span {
+    color: green;
+}
+
+.md-desc {
+    color: lightcoral;
+}
+
+/* Media Query */
+
+@media screen and (min-width:320px) and (max-width:480px) {
+    .md-parent {
+        background-color: black;
+    }
+
+    .md-title {
+        color: white;
+        font-size: 25px;
+    }
+
+    .md-desc {
+        color: rgb(42, 42, 20);
+    }
+
+}
+
+
+@media screen and (orientation:portrait) {
+    body {
+        background-color: black;
+    }
+}
+
+@media screen and (orientation:landscape) {
+    body {
+        background-color: orange;
+        margin: 30px;
+    }
+}
+
+/* @media screen and (max-width:786px) {
+    .md-parent {
+        background-color: white;
+    }
+
+    .md-title {
+        color: black;
+        font-size: 25px;
+    }
+
+    .md-desc {
+        color: blue;
+    }
+
+} */
