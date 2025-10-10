@@ -1,3 +1,4 @@
+"use strict"
 console.log("Javascript connected")
 // dymanic typed 2-interpreted 3-cross-platform 4-single-threaded
 
@@ -66,6 +67,51 @@ let studentData = {
     name: "Ali Hamza",
     email: "ali@gmail.com"
 }
+console.log([employeeData, studentData])
 
 
-console.log([employeeData,studentData])
+// Operators
+
+const basketRed = 100
+const basketBlue = 200
+
+// Arithmetic operators
+// + - * / % ** ++ --
+
+const sumOfBaskets = basketBlue / basketRed
+console.log('Total price is:', sumOfBaskets)
+
+let xyz = 1
+xyz++
+
+console.log(xyz, 'xyz')
+xyz--
+console.log(xyz, 'xyz')
+
+// Assignment operator
+
+let toffe1 = 10
+let toffe2 = 20
+
+toffe1 *= toffe2
+toffe1 = toffe1 + toffe2
+console.log(toffe1)
+
+
+// Comparison operators
+// <, >, ==, ===, >=, <=, != ,
+
+// red=100 blue=200
+let a = '5'
+let b = 5
+console.log(a === b)
+
+
+// logical operators
+
+// && || !
+
+const isChecked = false
+const isLogin = true
+console.log(isChecked || isLogin,'Logical')
+
