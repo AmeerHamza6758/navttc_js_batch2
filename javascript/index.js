@@ -113,5 +113,45 @@ console.log(a === b)
 
 const isChecked = false
 const isLogin = true
-console.log(isChecked || isLogin,'Logical')
+console.log(isChecked || isLogin, 'Logical')
 
+
+
+// Control flow statements
+
+let isLoggedIn = true
+const isRegistered = true
+
+if (isRegistered) {
+    console.log('Please login yourself')
+    console.log('GO> HOME> Login-Page')
+} else if (isLoggedIn) {
+    console.log('User logged true')
+    console.log('WELOCME TO PAGE')
+} else {
+    console.log('Guest User')
+    console.log('Please Register yourself.')
+    console.log('GO> HOME> Registeration-Page')
+}
+
+console.log('End section')
+
+
+// 
+const IsBreakfast = true
+const isLunch = true
+const isDinner = false
+
+if (IsBreakfast) {
+    console.log('I have good mindset')
+}else{
+    console.log('first')
+}
+
+if (isLunch) {
+    console.log('I have good health')
+}
+
+if (isDinner) {
+    console.log('Health is Wealth')
+}
