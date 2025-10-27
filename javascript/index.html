@@ -5,12 +5,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        .button {
+            color: red;
+            font-weight: 800;
+            padding: 20px;
+            background-color: green;
+            border-radius: 20px;
+        }
+
+        .button:hover {
+            background-color: yellow;
+            color: black;
+        }
+    </style>
 </head>
 
 <body>
-    <h1>Learning Javascript</h1>
+    <h1 id="title"></h1>
 
-    <script src="../javascript/index.js"></script>
+    <p class="desc" title="Ye just paragraph ha">Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+    <p class="desc">Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+    <p class="desc">Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+    <button id="btn" class="button" style="color: red;">Click me</button> <br> <br>
+    <strong id="message"></strong>
+
+    <script src="../javascript/methods.js"></script>
 </body>
 
 </html>
