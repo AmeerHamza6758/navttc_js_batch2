@@ -80,6 +80,83 @@ console.log(Math.max(23, 5, 67, 8, 1, 6), "max values")
 console.log(Math.min(23, 5, 67, 8, 1, 6), "min values")
 
 
+//Object methods
+// Keys, values, entries, freeze, seal, assign,
+
+const employeeData = {
+    name: 'Ameer Hamza',
+    email: 'ameer@yopmail.com',
+    phone: 34567235,
+    gender: 'Male',
+    addres: {
+        city: 'KPR',
+        district: 'RYK',
+        division: 'BWP',
+        Province: 'Pubjab',
+        country: 'Pakistan'
+    },
+    callMe: () => { console.log("I'm Clicked") }
+}
+// Freez
+// Object.freeze(employeeData)
+
+// Seal
+Object.seal(employeeData)
+// Assign
+employeeData.name = 'Ali Fahad'
+
+employeeData.age = 25
+employeeData["brackedtAge"] = 30
+
+console.log(employeeData, 'Employe data object')
+
+console.log(Object.keys(employeeData))
+console.log(Object.values(employeeData))
+console.log(employeeData.email, 'Employe name')
+employeeData.callMe()
+
+console.log(Object.entries(employeeData))
 
 
 
+const obj1 = {
+    name: 'Ameer',
+    email: 'ameer'
+}
+
+const obj2 = {
+    name: 'Ali',
+    email: 'ameer@yopmail.co',
+    age: 20
+}
+
+const targetObject = {}
+console.log(obj2, 'This is object 2')
+
+Object.assign(targetObject, obj1, obj2)
+
+targetObject.email = 'ali@yopmail.co'
+
+console.log(targetObject, 'Target Object')
+
+
+
+// Array Methods
+// push, pop, shift, unshift, slice
+
+const studentsList = ["Minahil", "Saba", "Aliza", "Fiza", "Shoaib", "Awais"]
+
+console.log(studentsList, 'Here is Students List')
+
+studentsList.push("Arslan", "Ali")
+
+// studentsList.unshift("Ali","Ali")
+
+// studentsList.pop(2)   
+// studentsList.shift(2)
+
+
+console.log(studentsList, 'Here is Students List')
+
+const slicedValues = studentsList.slice(2, 10)
+console.log(slicedValues, 'sliced')
