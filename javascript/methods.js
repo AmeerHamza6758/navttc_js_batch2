@@ -148,7 +148,7 @@ const studentsList = ["Minahil", "Saba", "Aliza", "Fiza", "Shoaib", "Awais"]
 
 console.log(studentsList, 'Here is Students List')
 
-studentsList.push("Arslan", "Ali")
+// studentsList.push("Arslan", "Ali")
 
 // studentsList.unshift("Ali","Ali")
 
@@ -160,3 +160,81 @@ console.log(studentsList, 'Here is Students List')
 
 const slicedValues = studentsList.slice(2, 10)
 console.log(slicedValues, 'sliced')
+
+// splice , concat, join, includes, indexOf  || filter, map, foreach, some, every, find , reduce || flat
+
+const spliedArray = studentsList.splice(1, 0, "Ameer", "Hamza")
+// console.log(spliedArray, 'Spliced array')
+// console.log(studentsList)
+
+const arr1 = [1, 2, 3, 4, 5]
+const arr2 = [6, 7, 8, 9]
+
+const newConcatedArray = arr1.concat(arr2)
+console.log(newConcatedArray, 'Concated Array')
+
+// console.log(newConcatedArray.flat(), 'Concated Array')
+
+const joinedItems = studentsList.join("=")
+
+console.log(joinedItems, 'Joined Arrayy')
+
+console.log(arr1.includes(7))
+
+console.log(arr1.indexOf(3))
+
+
+// filter
+const filteredNums = arr1.filter((item, index) => {
+    return item > 3
+})
+
+const filteredStudents = studentsList.filter((x, y) => x == "Ali")
+console.log(filteredStudents, 'Filetred Students')
+console.log(filteredNums, 'here is filtered array')
+
+
+// map
+const newMappedResult = arr1.map((item, index) => {
+    return item * 10
+})
+
+console.log(newMappedResult, 'Mapped items')
+
+// foreach
+let newArray = []
+const eachItems = arr1.forEach((item, index) => {
+    newArray.push(item * 10)
+})
+
+console.log(newArray, 'Here is foreach')
+const arr3 = [20, 20, 30, 40, 20, 50, 30]
+const findedArr = arr3.find((i, x) => {
+    let abc = i > 20
+    if (abc) {
+        console.log(i, x, 'index')
+        return abc
+    }
+})
+console.log(findedArr, 'Found item')
+
+
+const checkNum = arr3.every((a, b) => {
+    return a > 40
+})
+console.log(checkNum, 'here is result')
+
+// reduce
+
+const reducedValues = arr3.reduce((accu, current) => {
+    accu.push(current * 10)
+    return accu
+}, [])
+console.log(reducedValues, 'Reduced Values')
+
+const studObject = studentsList.reduce((accu, curr, index) => {
+    accu[index] = curr
+    return accu
+}, {})
+
+console.log(studObject, 'Students Object')
