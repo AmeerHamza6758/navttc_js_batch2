@@ -238,3 +238,148 @@ const studObject = studentsList.reduce((accu, curr, index) => {
 }, {})
 
 console.log(studObject, 'Students Object')
+
+
+// Callbacks
+
+const esFunc = () => {
+    console.log()
+    return 'ameer'
+}
+
+
+// Callbacks
+
+// function addNums(x, y) {
+//     console.log(x + y, 'Here is some of two values')
+//     return sum = x + y
+// }
+
+function mainFunction(a, b, callback) {
+    console.log('Hello World')
+    console.log('Main function called')
+
+    callback(a, b)
+    console.log('end of function call')
+
+}
+
+mainFunction(10, 20, (x, y) => {
+    console.log(x + y, 'Here is some of two values')
+    return sum = x + y
+})
+
+// console.log('main end of function call', mainFunction(10, 20, addNums))
+
+
+// template lietrals
+const tname = 'Ali Shoaib'
+const name2 = tname
+
+const tempvalue = `Hey, my name is ${tname}`
+
+console.log(tempvalue)
+
+// spread/rest operators ...
+
+const srnums = [1, 2, 4, 3, 5, 6, 7, 8]
+const srnums2 = [9, 10, 11, 12, 13, 14]
+
+const srtotal = [...srnums, ...srnums2]
+console.log(srtotal, 'total')
+
+function srFunc(...nums) {
+
+    console.log(...nums, 'sr nums')
+}
+srFunc(...srnums)
+
+// Destrcture
+const [first, second, ...remaining] = srnums
+
+console.log(first, second, '===', remaining)
+
+
+
+/////////////////////////////////
+
+if (true) {
+    console.log('here we check scopes')
+    let a = 10
+    const b = 20
+    var c = 30
+}
+
+console.log('here is variables', c);
+
+//IIFE
+(function () {
+    console.log("This runs immediately!");
+})();
+
+// anno
+const greet = function (a, b) {
+    return a + b;
+};
+console.log(greet(2, 3)); // Hi there!
+
+//function expresion
+const add = function (a, b) {
+    return a + b;
+};
+console.log(add(2, 3)); // 5
+
+
+
+const square = (n) => {
+    // return [n * n, n * n]
+}
+console.log(square(4)); // 16
+
+
+
+function* numbers() {
+    yield 1;
+    yield 2;
+    yield 3;
+}
+
+const gen = numbers();
+console.log(gen)
+console.log(gen.next().value);
+console.log(gen.next().value);
+console.log(gen.next().value);
+console.log(gen.next().value);
+
+
+function factorial(n) {
+    if (n === 0) return 1;
+
+    return n * factorial(n - 1);
+}
+
+console.log(factorial(5)); // 120
+
+// 1st wala
+function fetchData(callback) {
+    console.log('Data fetched');
+    callback();
+}
+
+//2nd wala
+function processData(callback) {
+    console.log('Data processed');
+    callback();
+}
+
+//3rd
+function displayData() {
+    console.log('Data displayed');
+}
+
+// Callback Hell
+fetchData(function () {
+    processData(function () {
+        displayData();
+    });
+});
