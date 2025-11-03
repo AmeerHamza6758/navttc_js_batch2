@@ -402,4 +402,32 @@ function addMessage() {
     messageElement.textContent = "Hey Ameer sb I'm clicked"
 }
 
-// 
+//Promises
+
+console.log('start')
+
+const isLogged = new Promise((resolve, rejected) => {
+    let isStudLogged = false
+    if (isStudLogged) {
+        console.log('promise ha')
+        let sum = 10 + 20
+        resolve(sum)
+    }
+    else {
+        console.log('rejected ha')
+        rejected("Student is not logged-In")
+    }
+})
+
+isLogged.then((data) => console.log('here is data:', data))
+    .catch((error) => console.log("Here is promise rejected", error)).finally(() => console.log('hello finally'))
+
+console.log('End')
+console.log('AWAIS')
+
+
+
+setTimeout(() => {
+    console.log('ye 1000ms  bad execute hua ha')
+}, 2000);
+

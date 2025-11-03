@@ -1,0 +1,136 @@
+JavaScript Execution Flow and Event Loop
+
+This document explains how JavaScript code executes — from the moment it is written in a text editor to the final point where the program finishes running. It covers all internal components such as the Parser, Call Stack, Web APIs, and Event Loop.
+
+ Step   Description                                           == Responsible Component 
+
+ 1    = You write JS code                                     == Text Editor                 
+ 2    = Browser or Node loads JS engine                       == Runtime Environment         
+ 3    = Engine parses & compiles code into byte-code           == Parser + Compiler           
+ 4    = Global Execution Context created                      == JS Engine                   
+ 5    = Code starts executing line by line                    == Call Stack                  
+ 6    = Function call → new Function Execution Context pushed == Call Stack                  
+ 7    = Function finishes → popped from stack                 == Call Stack                  
+ 8    = Async tasks sent to Web APIs                          == Browser/Node APIs           
+ 9    = Callback/Promise queued                               == Callback or Micro-task Queue 
+ 10   = Event Loop moves queued tasks to stack when free      == Event Loop                  
+
+
+1. Source Code
+
+What Happens:
+The process begins when a developer writes JavaScript code in a text editor or IDE (such as Visual Studio Code).
+At this stage, the code is just plain text — it has not yet been understood or executed by the computer.
+
+Who Handles It:
+The text editor simply saves the code as a .js file. The actual execution happens later inside the JavaScript engine (for example, V8 in Chrome and Node.js).
+
+
+2. Parser → Abstract Syntax Tree (AST) → Bytecode
+
+What Happens:
+When the JavaScript engine loads your file, it first parses the code:
+
+The Parser reads the source code line by line and checks for syntax errors.
+
+If valid, it converts the code into a structured representation called an Abstract Syntax Tree (AST).
+
+The Interpreter/Compiler (in V8, this is Ignition) then converts the AST into bytecode, which is a lower-level, machine-friendly version of the code.
+
+The JIT Compiler (TurboFan in V8) may further optimize frequently used parts of the code into machine code for faster execution.
+
+Who Handles It:
+This process is performed entirely by the JavaScript engine.
+
+3. Global Execution Context Created
+
+What Happens:
+Before any code runs, the JavaScript engine creates the Global Execution Context (GEC).
+This is the base environment where all global code executes.
+
+It contains:
+
+A Global Object (for example, window in browsers or global in Node.js).
+
+A this reference (points to the global object in non–strict mode).
+
+A Memory Component (to store global variables and function declarations).
+
+Who Handles It:
+The JavaScript engine automatically creates this context and places it in the Call Stack.
+
+4. Call Stack Starts Execution
+
+What Happens:
+The Call Stack is a data structure that keeps track of the order of function execution.
+When execution begins, the Global Execution Context is pushed onto the stack.
+The JavaScript engine starts executing the code line by line.
+
+Who Handles It:
+The JavaScript engine manages the Call Stack.
+It automatically pushes and pops execution contexts as functions are called and completed.
+
+5. Function Calls → Pushed on Stack
+
+What Happens:
+When a function is called:
+
+A new Function Execution Context (FEC) is created for that function.
+
+This context includes the function’s local variables, parameters, and scope.
+
+The FEC is pushed onto the Call Stack and executes its code.
+
+Once the function completes, its context is popped off the stack, and control returns to the previous context.
+
+Who Handles It:
+The JavaScript engine automatically creates and manages these execution contexts.
+
+6. Asynchronous Tasks → Web APIs → Queues
+
+What Happens:
+When JavaScript encounters an asynchronous task (such as setTimeout, fetch, event listeners, or Promises):
+
+These tasks are delegated to the Web APIs (in browsers) or corresponding APIs in Node.js.
+
+Once completed, their callbacks or promise resolutions are sent to specific queues:
+
+Callback Queue for setTimeout, setInterval, or event listeners.
+
+Microtask Queue for Promises and async/await.
+
+Who Handles It:
+
+Web APIs handle the asynchronous operations.
+
+Once finished, they place the callback or microtask into their respective queues.
+
+7. Event Loop → Moves Tasks to Stack
+
+What Happens:
+The Event Loop continuously monitors both the Call Stack and the task queues.
+
+If the Call Stack is empty, it checks the Microtask Queue first (Promises and async/await).
+
+If microtasks are available, it moves them to the Call Stack for execution.
+
+After all microtasks are completed, it then moves callbacks from the Callback Queue to the Call Stack.
+
+This ensures that asynchronous tasks execute after the main (synchronous) code finishes, but in a non-blocking way.
+
+Who Handles It:
+The Event Loop, built into the runtime environment (browser or Node.js), manages this coordination.
+
+8. Program Finishes
+
+What Happens:
+When there are no more tasks in the Call Stack and both queues are empty:
+
+The Global Execution Context is removed from the Call Stack.
+
+The JavaScript Engine performs garbage collection to free up unused memory.
+
+The program has now fully completed its execution.
+
+Who Handles It:
+The JavaScript engine and the runtime environment handle cleanup and memory management.
