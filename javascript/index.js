@@ -406,6 +406,10 @@ function addMessage() {
 
 console.log('start')
 
+// setTimeout(() => {
+//     console.log('ye 1000ms  bad execute hua ha')
+// }, 10000);
+
 const isLogged = new Promise((resolve, rejected) => {
     let isStudLogged = false
     if (isStudLogged) {
@@ -425,9 +429,22 @@ isLogged.then((data) => console.log('here is data:', data))
 console.log('End')
 console.log('AWAIS')
 
+function timerFunc(time) {
+    return new Promise((resolve, rejected) => {
+        setTimeout(() => { resolve("Resolved") }, time)
+    })
+}
 
+// asyc await
+async function showResults() {
+    const result1 = await timerFunc(4000)
+    console.log(result1, 'here is result-1')
+    const result2 = await timerFunc(4000)
+    console.log(result2, 'here is result-2')
+    const result3 = await timerFunc(4000)
+    console.log(result3, 'here is result-3')
+}
 
-setTimeout(() => {
-    console.log('ye 1000ms  bad execute hua ha')
-}, 2000);
+showResults()
 
+console.log('Hello Enddd ')
