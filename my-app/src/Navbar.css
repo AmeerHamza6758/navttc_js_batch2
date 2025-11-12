@@ -1,0 +1,13 @@
+.nav-header{
+    background-color: yellowgreen;
+    display: flex;
+    justify-content: space-between;
+    align-items: center ;
+}
+
+.nav-header> ul{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}

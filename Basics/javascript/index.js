@@ -365,7 +365,7 @@ let studentRegData = {
 // DOM
 const domTitle = document.getElementById('title')
 // console.log(domTitle, 'DOM Accessed')
-domTitle.innerText = 'Ameer Hamza'
+// domTitle.innerText = 'Ameer Hamza'
 
 
 //getElementById //getElementsByClassName //querySelector
@@ -419,32 +419,59 @@ const isLogged = new Promise((resolve, rejected) => {
     }
     else {
         console.log('rejected ha')
-        rejected("Student is not logged-In")
+        // rejected("Student is not logged-In")
     }
 })
 
-isLogged.then((data) => console.log('here is data:', data))
-    .catch((error) => console.log("Here is promise rejected", error)).finally(() => console.log('hello finally'))
+// isLogged.then((data) => console.log('here is data:', data))
+//     .catch((error) => console.log("Here is promise rejected", error)).finally(() => console.log('hello finally'))
 
 console.log('End')
 console.log('AWAIS')
 
 function timerFunc(time) {
     return new Promise((resolve, rejected) => {
-        setTimeout(() => { resolve("Resolved") }, time)
+        // setTimeout(() => { resolve("Resolved") }, time)
     })
 }
 
 // asyc await
-async function showResults() {
-    const result1 = await timerFunc(4000)
-    console.log(result1, 'here is result-1')
-    const result2 = await timerFunc(4000)
-    console.log(result2, 'here is result-2')
-    const result3 = await timerFunc(4000)
-    console.log(result3, 'here is result-3')
+// async function showResults() {
+//     const result1 = await timerFunc(4000)
+//     console.log(result1, 'here is result-1')
+//     const result2 = await timerFunc(4000)
+//     console.log(result2, 'here is result-2')
+//     const result3 = await timerFunc(4000)
+//     console.log(result3, 'here is result-3')
+// }
+
+// showResults()
+
+console.log('Hello Enddd')
+
+
+
+
+// `hello ${abc}`
+let str = "abcdefghIg"
+const [p, o, c, ...res] = str
+// console.log(p, o, c, '===', res)
+
+
+
+
+
+function greet(data) {
+    const { name, age } = data
+    console.log(`Hello, ${name}! You are ${age} years old.`);
 }
 
-showResults()
+const person = { name: "Bob", age: 25 };
+greet(person); // Output: Hello, Bob! You are 25 years old.
 
-console.log('Hello Enddd ')
+
+const currentTime = new Date()
+
+currentTime.setFullYear(2026)
+console.log(currentTime.getFullYear())
+console.log(currentTime, 'cureent time')
