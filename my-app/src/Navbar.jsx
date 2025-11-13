@@ -1,27 +1,38 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import './Navbar.css'
 
 function Navbar() {
     var name = "Ameer Hamza"
-    console.log("Hello", name)
+    // console.log("Hello", name)
     // State management
     let [myName, setMyName] = useState("Ameer Hamza")
-    const [count, setCOunt] = useState(0)
+    const [count, setCount] = useState(0)
 
-    if (name == "Ameer Hamza") {
-        setMyName("Ameer Hamza")
-        // myName = "saba"
-        console.log("Hello", name)
-        // return (
-        //     <h1>Hello, {myName}</h1>
-        // )
+    // if (name == "Ameer Hamza") {
+    //     setMyName("Ameer Hamza")
+    //     // myName = "saba"
+    //     console.log("Hello", name)
+    //     // return (
+    //     //     <h1>Hello, {myName}</h1>
+    //     // )
+    // }
+
+
+    // useEffect
+    // useEffect(() => {
+    //     console.log("Hello I'm useEffect HooK")
+    // }, [count])
+
+    // onClick={() => setCount(count + 2)
+
+    const handleCount=()=> {
+        console.log('handle count triggered')
+        setCount(count + 1)
     }
-    console.log(myName, 'my-name')
-    console.log(myName, 'my-name')
 
     return (
         <div className='nav-header'>
-            <h3>{myName}</h3>
+            <h3 onMouseLeave={handleCount}>{myName}= {count}</h3>
             <ul>
                 <li>Home</li>
                 <li>Products</li>
