@@ -2,7 +2,6 @@ import { useEffect, useState } from 'react'
 import './Navbar.css'
 
 function Navbar() {
-    var name = "Ameer Hamza"
     // console.log("Hello", name)
     // State management
     let [myName, setMyName] = useState("Ameer Hamza")
