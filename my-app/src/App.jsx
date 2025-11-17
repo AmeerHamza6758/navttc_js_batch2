@@ -4,18 +4,22 @@ import IndexPage from './pages/IndexPage'
 import Footer from './components/Footer'
 import Navbar from './components/Navbar'
 import CompA from './prop/CompA';
+import StudentRegistrationForm from './conditional-rendering/RegisterationForm';
+import ConditionPage from './conditional-rendering/ConditionPage';
 
 function App() {
-    const [tName, setTName] = useState("Ameer")
+  const [tName, setTName] = useState("Ameer")
   return (
     <>
       {/* <Navbar />
-      <Navbar />
-      <Navbar /> */}
+      <Navbar />*/}
+      {/* <Navbar /> */}
+      {/* <IndexPage /> */}
 
-      {/* <IndexPage />
-      <Footer /> */}
-      <CompA name={tName}/>
+      <StudentRegistrationForm />
+      {/* <ConditionPage /> */}
+      {/* <Footer /> */}
+      {/* <CompA name={tName} /> */}
     </>
   )
 }
