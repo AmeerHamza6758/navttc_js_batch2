@@ -2,19 +2,37 @@ import React, { useState } from "react";
 import "./form.css";
 
 const StudentRegistrationForm = () => {
-    const [fullName, setFullName] = useState();
-    const [email, setEmail] = useState();
+    const [fullName, setFullName] = useState("");  //false
+    const [email, setEmail] = useState("");
     const [phone, setPhone] = useState();
-    const [gender, setGender] = useState();
+    const [gender, setGender] = useState("");
     const [dob, setDob] = useState();
-    const [error, setError] = useState({})
+
+    // const [error, setError] = useState({
+    //     fullname:"",
+    // })
+
+
+    // function formValidation() {
+    //     let formErrors = {}
+    //     if (fullName == undefined || fullName == null) {
+    //         formErrors.name = "Pleae enter your name..."
+    //     } else if (email == undefined || email == null) {
+    //         formErrors.email = "Please enter email address"
+    //     }
+    //     else if (!email.includes('@')) {
+    //         formErrors.email = "Please enter a valid email address"
+    //     }
+    //     setError(formErrors)
+    //     console.log(error, 'form errors')
+    // }
 
 
     function formValidation() {
         let formErrors = {}
-        if (fullName == undefined || fullName == null) {
+        if (!fullName.trim()) {
             formErrors.name = "Pleae enter your name..."
-        } else if (email == undefined || email == null) {
+        } else if (!email.trim()) {
             formErrors.email = "Please enter email address"
         }
         else if (!email.includes('@')) {
@@ -22,16 +40,22 @@ const StudentRegistrationForm = () => {
         }
         setError(formErrors)
         console.log(error, 'form errors')
+        console.log(Object.keys(formErrors).length, 'keys console')
+
+        return Object.keys(formErrors).length
     }
 
 
     const handleFormSubmit = (e) => {
         e.preventDefault();
-        formValidation()
-        // alert("Form submitted.")
+        if (formValidation()) {
+            console.log('Error in form')
+            return null
+        }
+        alert("Form Submitted")
     }
 
-
+    // meer.hamza@builtinsoft.com
     return (
         <div className="form-container">
             <div className="form-card">
@@ -57,8 +81,8 @@ const StudentRegistrationForm = () => {
                             onChange={(e) => setEmail(e.target.value)}
                             placeholder="Enter your email"
                         />
-                    </div>
 
+                    </div>{error.email && <strong style={{ color: 'red' }}>{error.email}</strong>}
                     <div className="form-group">
                         <label>Phone</label>
                         <input
