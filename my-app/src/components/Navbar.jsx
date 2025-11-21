@@ -1,9 +1,11 @@
-import { useEffect, useState } from 'react'
+import { useContext, useEffect, useState } from 'react'
 import './Navbar.css'
+import { UserContext } from '../context/UserContext'
 
 function Navbar() {
     // console.log("Hello", name)
     // State management
+    const { userData } = useContext(UserContext)
     let [myName, setMyName] = useState("Ameer Hamza")
     const [count, setCount] = useState(0)
 
@@ -24,7 +26,7 @@ function Navbar() {
 
     // onClick={() => setCount(count + 2)
 
-    const handleCount=()=> {
+    const handleCount = () => {
         console.log('handle count triggered')
         setCount(count + 1)
     }
@@ -39,11 +41,7 @@ function Navbar() {
                 <li>Contact</li>
             </ul>
 
-            <ul>
-                <li>S</li>
-                <li>F</li>
-                <li>A</li>
-            </ul>
+            <h3>{userData.name}</h3>
         </div>
     )
 }

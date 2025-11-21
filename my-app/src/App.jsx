@@ -11,14 +11,12 @@ function App() {
   const [tName, setTName] = useState("Ameer")
   return (
     <>
-      {/* <Navbar />
-      <Navbar />*/}
+      <Navbar />
       {/* <Navbar /> */}
-      {/* <IndexPage /> */}
-
-      <StudentRegistrationForm />
+      <IndexPage />
+      {/* <StudentRegistrationForm /> */}
       {/* <ConditionPage /> */}
-      {/* <Footer /> */}
+      <Footer />
       {/* <CompA name={tName} /> */}
     </>
   )

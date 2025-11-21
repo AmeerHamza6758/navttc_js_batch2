@@ -55,7 +55,6 @@ const StudentRegistrationForm = () => {
         alert("Form Submitted")
     }
 
-    // meer.hamza@builtinsoft.com
     return (
         <div className="form-container">
             <div className="form-card">
