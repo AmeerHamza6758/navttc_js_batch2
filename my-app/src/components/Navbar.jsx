@@ -1,8 +1,10 @@
 import { useContext, useEffect, useState } from 'react'
 import './Navbar.css'
 import { UserContext } from '../context/UserContext'
+import { Link, useNavigate } from 'react-router-dom'
 
 function Navbar() {
+    const navigation = useNavigate()
     // console.log("Hello", name)
     // State management
     const { userData } = useContext(UserContext)
@@ -31,16 +33,21 @@ function Navbar() {
         setCount(count + 1)
     }
 
+    const handleClick =()=>{
+        console.log('button is clicked')
+        navigation("/sales")
+    }
+
     return (
         <div className='nav-header'>
             <h3 onMouseLeave={handleCount}>{myName}= {count}</h3>
-            <ul>
-                <li>Home</li>
-                <li>Products</li>
-                <li>About</li>
-                <li>Contact</li>
-            </ul>
-
+            <nav style={{ display: 'flex', gap: '20px' }}>
+                <Link to="/">Home</Link>
+                <Link to="/sales">Sales</Link>
+                <Link to="/products">Products</Link>
+                <Link to="/contact">Contact</Link>
+            </nav>
+            <button onClick={handleClick}>Click me</button>
             <h3>{userData.name}</h3>
         </div>
     )
