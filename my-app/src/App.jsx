@@ -21,7 +21,7 @@ function App() {
         <Route path='/sales' element={<Sales />} />
         <Route path='/products' element={<Products />} />
         <Route path='/contact' element={<ContactUs />} />
-<Route path='*' element={<CompA/>}/>
+        <Route path='*' element={<CompA />} />
         {/* <Route path='/settings'>
           <Route path='/user' element={<CompA />} />
         </Route> */}
