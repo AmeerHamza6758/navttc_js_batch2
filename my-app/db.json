@@ -1,0 +1,75 @@
+{
+  "posts": [
+    {
+      "id": "1",
+      "title": "a title",
+      "views": 100
+    },
+    {
+      "id": "2",
+      "title": "another title",
+      "views": 200
+    },
+    {
+      "id": "6c20",
+      "name": "ameert"
+    }
+  ],
+  "comments": [
+    {
+      "id": "1",
+      "text": "a comment about post 1",
+      "postId": "1"
+    },
+    {
+      "id": "2",
+      "text": "another comment about post 1",
+      "postId": "1"
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  },
+  "users": [
+    {
+      "id": "2",
+      "firstname": "Sara",
+      "lastname": "Ahmed",
+      "email": "sara.ahmed@example.com",
+      "address": "45 Garden Road, Karachi",
+      "contactNo": "0300-2222222"
+    },
+    {
+      "id": "3",
+      "firstname": "Hamza",
+      "lastname": "Ali",
+      "email": "hamza.ali@example.com",
+      "address": "67 Lake Street, Islamabad",
+      "contactNo": "0300-3333333"
+    },
+    {
+      "id": "4",
+      "firstname": "Fatima",
+      "lastname": "Yousuf",
+      "email": "fatima.yousuf@example.com",
+      "address": "89 Park Avenue, Lahore",
+      "contactNo": "0300-4444444"
+    },
+    {
+      "id": "5",
+      "firstname": "Omar",
+      "lastname": "Hassan",
+      "email": "omar.hassan@example.com",
+      "address": "12 Hill Road, Karachi",
+      "contactNo": "0300-5555555"
+    },
+    {
+      "id": "d3c4",
+      "firstname": "Ameer",
+      "lastname": "Hamza",
+      "email": "ameer@gmail.com",
+      "address": "Test",
+      "contactNo": "98767890987"
+    }
+  ]
+}

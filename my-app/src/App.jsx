@@ -10,6 +10,10 @@ import { Route, Routes } from 'react-router-dom';
 import Sales from './pages/Sales';
 import Products from './pages/Products';
 import ContactUs from './pages/ContactUs';
+import ViewUserDetails from './pages/view-users-list/ViewUserDetails';
+import CreateUserDetails from './pages/create-user/CreateUserDetails';
+import EditUserDetails from './pages/edit-user/EditUserDetails';
+import ViewSingleUserDetails from './pages/view-user/ViewSingleUserDetails';
 
 function App() {
   const [tName, setTName] = useState("Ameer")
@@ -26,6 +30,10 @@ function App() {
           <Route path='/user' element={<CompA />} />
         </Route> */}
 
+        <Route path="/user" element={<ViewUserDetails />} />
+        <Route path="/create-user" element={<CreateUserDetails />} />
+        <Route path="/edit-user/:id" element={<EditUserDetails />} />
+        <Route path="/view-user/:id" element={<ViewSingleUserDetails />} />
       </Routes>
 
       <Footer />
